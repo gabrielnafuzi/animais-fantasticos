@@ -11,9 +11,9 @@ export default class TabNav {
       section.classList.remove(this.activeClass);
     });
 
-    const animeDirection = this.tabContent[index].dataset.anime;
+    const animateDirection = this.tabContent[index].dataset.animate;
 
-    this.tabContent[index].classList.add(this.activeClass, animeDirection);
+    this.tabContent[index].classList.add(this.activeClass, animateDirection);
   }
 
   // add events to tabs

@@ -1,5 +1,5 @@
 export default function initScrollAnimation() {
-  const sections = document.querySelectorAll('[data-anime="scroll"]');
+  const sections = document.querySelectorAll('[data-animate="scroll"]');
 
   function animateScroll() {
     const halfWindow = window.innerHeight * 0.6;

@@ -274,20 +274,20 @@ body {
   }
 }
 
-.js [data-anime='accordion'] dd {
+.js [data-animate='accordion'] dd {
   display: none;
 }
 
-[data-anime='accordion'] dt::after {
+[data-animate='accordion'] dt::after {
   content: '⬎';
   margin-left: 10px;
 }
 
-[data-anime='accordion'] dt.active::after {
+[data-animate='accordion'] dt.active::after {
   content: '⬏';
 }
 
-[data-anime='accordion'] dd.active {
+[data-animate='accordion'] dd.active {
   display: block;
   animation: slideDown 0.5s forwards;
 }
@@ -304,13 +304,13 @@ body {
   }
 }
 
-.js [data-anime='scroll'] {
+.js [data-animate='scroll'] {
   opacity: 0;
   transform: translate3d(-30px, 0, 0);
   transition: 0.3s;
 }
 
-.js [data-anime='scroll'].active {
+.js [data-animate='scroll'].active {
   opacity: 1;
   transform: translate3d(0, 0, 0);
 }

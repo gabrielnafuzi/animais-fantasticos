@@ -1,4 +1,4 @@
-import AnimeNumbers from './anime-numbers.js';
+import AnimateNumbers from './animate-numbers.js';
 
 export default function fetchAnimals(url, target) {
   // creates a div containing information
@@ -21,9 +21,9 @@ export default function fetchAnimals(url, target) {
   }
 
   // animates each animal's number
-  function animeAnimalsNumbers() {
-    const animeNumbers = new AnimeNumbers('[data-number]', '.numbers', 'active');
-    animeNumbers.init();
+  function animateAnimalsNumbers() {
+    const animateNumbers = new AnimateNumbers('[data-number]', '.numbers', 'active');
+    animateNumbers.init();
   }
 
   // Pull animals from a JSON archive
@@ -38,7 +38,7 @@ export default function fetchAnimals(url, target) {
       // to fill and animate the numbers
       animalsJSON.forEach(animal => fillAnimals(animal));
 
-      animeAnimalsNumbers();
+      animateAnimalsNumbers();
     } catch (err) {
       console.error(err);
     }
