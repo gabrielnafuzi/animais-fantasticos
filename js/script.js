@@ -13,7 +13,7 @@ import initScrollAnimation from './modules/scroll-animation.js';
 const smoothScroll = new SmoothScroll('[data-menu="smooth"] a[href^="#"]');
 smoothScroll.init();
 
-const accordion = new Accordion('[data-anime="accordion"] dt');
+const accordion = new Accordion('[data-animate="accordion"] dt');
 accordion.init();
 
 const tabNav = new TabNav('[data-tab="menu"] li', '[data-tab="content"] section');

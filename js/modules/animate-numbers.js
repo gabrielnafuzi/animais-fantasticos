@@ -1,4 +1,4 @@
-export default class AnimeNumbers {
+export default class AnimateNumbers {
   constructor(numbers, observerTarget, observerClass) {
     this.numbers = document.querySelectorAll(numbers);
     this.observerClass = observerClass;
@@ -31,7 +31,7 @@ export default class AnimeNumbers {
 
   // actives increment number to each number
   // selected from DOM
-  animeNumbers() {
+  animateAllNumbers() {
     this.numbers.forEach(number => this.constructor.incrementNumbers(number));
   }
 
@@ -39,7 +39,7 @@ export default class AnimeNumbers {
   handleMutation(mutation) {
     if (mutation[0].target.classList.contains(this.observerClass)) {
       this.observer.disconnect();
-      this.animeNumbers();
+      this.animateAllNumbers();
     }
   }
 
