@@ -1,4 +1,4 @@
-import initAnimeNumbers from './anime-numbers.js';
+import AnimeNumbers from './anime-numbers.js';
 
 export default function initFetchAnimals() {
   const numbersGrid = document.querySelector('.numbers-grid');
@@ -19,7 +19,8 @@ export default function initFetchAnimals() {
         createAnimal(animal);
       });
 
-      initAnimeNumbers();
+      const animeNumbers = new AnimeNumbers('[data-number]', '.numbers', 'active');
+      animeNumbers.init();
     } catch (err) {
       console.error(err);
     }
