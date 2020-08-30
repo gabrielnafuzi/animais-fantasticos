@@ -4,9 +4,9 @@ import TabNav from './modules/tabnav.js';
 import Modal from './modules/modal.js';
 import ToolTip from './modules/tooltip.js';
 import initDropdownMenu from './modules/dropdown-menu.js';
+import fetchAnimals from './modules/fetch-animals.js';
 import initMenuMobile from './modules/menu-mobile.js';
 import initOpeningTime from './modules/opening-time.js';
-import initFetchAnimals from './modules/fetch-animals.js';
 import initFetchBitcoin from './modules/fetch-bitcoin.js';
 import initScrollAnimation from './modules/scroll-animation.js';
 
@@ -28,6 +28,7 @@ tooltip.init();
 initDropdownMenu();
 initMenuMobile();
 initOpeningTime();
-initFetchAnimals();
 initFetchBitcoin();
 initScrollAnimation();
+
+fetchAnimals('../../animalsapi.json', '.numbers-grid');
