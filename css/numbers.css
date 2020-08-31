@@ -5,12 +5,6 @@
   column-gap: 50px;
   row-gap: 50px;
 }
-@media (max-width: 780px) {
-  .numbers-grid {
-    grid-column: 1;
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
 .numbers-grid h3 {
   font-size: 2rem;
@@ -23,4 +17,15 @@
   font-weight: bold;
   font-size: 1.5rem;
   color: #e54;
+}
+
+@media (max-width: 780px) {
+  .numbers-grid {
+    grid-column: 1;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .numbers-grid h3 {
+    font-size: 1.6rem;
+  }
 }
