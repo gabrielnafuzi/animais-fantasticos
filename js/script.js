@@ -37,5 +37,5 @@ menuMobile.init();
 const openingTimes = new OpeningTimes('[data-week]', 'open');
 openingTimes.init();
 
-fetchAnimals('../../animalsapi.json', '.numbers-grid');
+fetchAnimals('./animalsapi.json', '.numbers-grid');
 fetchBitcoin('https://blockchain.info/ticker', '.btc-price');
