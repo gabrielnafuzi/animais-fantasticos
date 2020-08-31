@@ -5,7 +5,7 @@ import Modal from './modules/modal.js';
 import ToolTip from './modules/tooltip.js';
 import DropdownMenu from './modules/dropdown-menu.js';
 import fetchAnimals from './modules/fetch-animals.js';
-import initMenuMobile from './modules/menu-mobile.js';
+import MenuMobile from './modules/menu-mobile.js';
 import initOpeningTime from './modules/opening-time.js';
 import fetchBitcoin from './modules/fetch-bitcoin.js';
 import ScrollAnimation from './modules/scroll-animation.js';
@@ -28,10 +28,12 @@ tooltip.init();
 const scrollAnimation = new ScrollAnimation('[data-animate="scroll"]');
 scrollAnimation.init();
 
-const dropdownMenu = new DropdownMenu('[data-dropdown]', ['touchstart', 'click']);
+const dropdownMenu = new DropdownMenu('[data-dropdown]');
 dropdownMenu.init();
 
-initMenuMobile();
+const menuMobile = new MenuMobile('[data-menu="button"]', '[data-menu="list"]');
+menuMobile.init();
+
 initOpeningTime();
 
 fetchAnimals('../../animalsapi.json', '.numbers-grid');
