@@ -9,6 +9,7 @@ import MenuMobile from './modules/menu-mobile.js';
 import OpeningTimes from './modules/opening-times.js';
 import fetchBitcoin from './modules/fetch-bitcoin.js';
 import ScrollAnimation from './modules/scroll-animation.js';
+import SlideNav from './modules/slide-nav.js';
 
 const smoothScroll = new SmoothScroll('[data-menu="smooth"] a[href^="#"]');
 smoothScroll.init();
@@ -19,7 +20,11 @@ accordion.init();
 const tabNav = new TabNav('[data-tab="menu"] li', '[data-tab="content"] section');
 tabNav.init();
 
-const modal = new Modal('[data-modal="open"]', '[data-modal="close"]', '[data-modal="container"]');
+const modal = new Modal(
+  '[data-modal="open"]',
+  '[data-modal="close"]',
+  '[data-modal="container"]'
+);
 modal.init();
 
 const tooltip = new ToolTip('[data-tooltip]');
@@ -39,3 +44,7 @@ openingTimes.init();
 
 fetchAnimals('./animalsapi.json', '.numbers-grid');
 fetchBitcoin('https://blockchain.info/ticker', '.btc-price');
+
+const slide = new SlideNav('.slide', '.slide-wrapper');
+slide.init();
+slide.addControl('.custom-controls');
